@@ -1,0 +1,38 @@
+.cabecalho {
+  .container-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0;
+
+    .logo {
+      max-width: 5rem;
+    }
+
+    .navegacao {
+      .lista-ul {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        li {
+          &:not(:last-child) {
+            margin-right: 2.5rem;
+          }
+
+          a {
+            font-size: 1.8rem;
+            color: $-Dark-grayish;
+            transition: color 0.4s ease-in;
+            display: inline-block;
+          }
+          &:hover {
+            a {
+              color: $-Soft-red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

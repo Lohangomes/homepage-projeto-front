@@ -1,0 +1,143 @@
+@media (max-width: 1230px) {
+  .container-main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "future"
+      "new"
+      "tecnologia";
+
+    .nova-informacao {
+      text-align: left;
+    }
+
+    .Future-of-Web {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      h1 {
+        max-width: 100%;
+      }
+
+      .future-conteudo {
+        gap: 2rem;
+      }
+    }
+
+    .informacao-tecnologia {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cabecalho {
+    position: relative;
+    .container-cabecalho {
+      .navegacao {
+        .hamburguer {
+          display: flex;
+          align-items: center;
+          position: relative;
+          z-index: 9999;
+          border: 0;
+          cursor: pointer;
+          
+
+          &::after {
+            content: url(../assets/images/icon-menu.svg);
+            display: block;
+            width: 100%;
+          }
+
+          &::before {
+            content: url(../assets/images/icon-menu-close.svg);
+            display: block;
+            width: 100%;
+            display: none;
+          }
+
+          &.ativo {
+            &::after {
+              display: none;
+            }
+          }
+
+          &.ativo {
+            &::before {
+              display: block;
+            }
+          }
+        }
+
+        .caixa {
+          top: 0;
+          left: 0;
+          width: 100vw;
+          background-color: rgb(0, 0, 0, 0.5);
+          height: 100vh;
+          position: fixed;
+          animation: low 0.5s forwards;
+          display: none;
+
+          &.ativo {
+            display: block;
+          }
+
+          .lista-ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 2rem;
+            width: 50%;
+            height: 100vh;
+            top: 0;
+            right: 0;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+          }
+          li {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  .container-main {
+    .Future-of-Web {
+      grid-template-columns: 1fr;
+
+      .future-conteudo {
+        padding: 0;
+      }
+
+      h1 {
+        font-size: 4.5rem;
+      }
+    }
+  }
+
+  @keyframes low {
+    from {
+      opacity: 0;
+      transform: translateX(200px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
+  .container-main {
+    .informacao-tecnologia {
+      .tecnologia {
+        flex-flow: column-reverse;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+}

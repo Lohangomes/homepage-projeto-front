@@ -1,0 +1,124 @@
+.container-main {
+  display: grid;
+  grid-template-areas:
+    "img img new"
+    "future future new"
+    "tecnologia tecnologia tecnologia";
+  grid-template-columns: repeat(2, 1fr) 35rem;
+  gap: 2rem;
+
+  picture {
+    grid-area: img;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .nova-informacao {
+    padding: 2rem;
+    grid-area: new;
+    background-color: $-Very-dark;
+    a {
+      color: $-Off-white;
+      transition: color 0.3s ease;
+      &:hover {
+        color: $-Soft-orange;
+      }
+    }
+
+    span {
+      display: block;
+      font-size: 3.6rem;
+      font-weight: bold;
+      color: $-Soft-orange;
+    }
+
+    div {
+      a {
+        font-weight: 900;
+      }
+
+      p {
+        margin-top: 1rem;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #ffffff52;
+        padding-block: 3rem;
+      }
+
+      &:last-child {
+        padding-block: 3rem;
+      }
+    }
+  }
+
+  .Future-of-Web {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-area: future;
+
+    h1 {
+      font-size: 5.4rem;
+      font-weight: 900;
+      max-width: 37rem;
+    }
+
+    .future-conteudo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding-left: 1rem;
+
+      p {
+        color: $-Dark-grayish;
+      }
+
+      a {
+        &:hover {
+          color: $-Off-white;
+          background-color: $-Very-dark;
+        }
+      }
+    }
+  }
+
+  .informacao-tecnologia {
+    padding-top: 2rem;
+    grid-area: tecnologia;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 35rem;
+    gap: 2rem;
+
+    img {
+      max-width: 10rem;
+    }
+
+    .tecnologia {
+      display: flex;
+      gap: 2rem;
+
+      span {
+        color: $-Soft-red;
+        font-size: 3rem;
+        font-weight: bold;
+      }
+      a {
+        display: block;
+        color: $-Very-dark;
+        transition: color 0.3s ease;
+        font-size: 1.8rem;
+        margin-block: 1.5rem;
+        font-weight: 700;
+        &:hover {
+          color: $-Soft-red;
+        }
+      }
+
+      p {
+        color: $-Dark-grayish;
+      }
+    }
+  }
+}

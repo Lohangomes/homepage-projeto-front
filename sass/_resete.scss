@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  text-transform: capitalize;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Inter", system-ui;
+  background-color: $-Off-white;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
